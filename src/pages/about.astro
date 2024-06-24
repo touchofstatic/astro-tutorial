@@ -15,7 +15,7 @@ const identity = {
 const skills = ["HTML", "CSS", "JavaScript?", "Astro", "eat hot chip", "cry"];
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 10;
 
 const skillColor = "navy";
@@ -54,8 +54,6 @@ const fontWeight = "bold";
       back and see how my journey is going!
     </p>
 
-    <p style="color: white">You've got this, and you're here for a reason.</p>
-
     <p>Here are a few facts about me!</p>
     <ul>
       <li>My name is {identity.firstName}.</li>
@@ -79,6 +77,8 @@ const fontWeight = "bold";
     {happy && <p>I am happy to be learning Astro!</p>}
 
     {finished && <p>I finished this tutorial!</p>}
+
+    <p style="color: white">You've got this, and you're here for a reason.</p>
 
   </BaseLayout>
   </body>
