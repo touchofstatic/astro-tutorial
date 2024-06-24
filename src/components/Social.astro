@@ -1,13 +1,15 @@
 ---
-const { platform, username } = Astro.props;
+const { linktext, platform, username } = Astro.props;
 ---
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+<a href={`https://www.${platform}.com/${username}`}>{linktext}</a>
 
 <style>
     a {
       padding: 0.5rem 1rem;
       color: white;
-      background-color: #4c1d95;
+      background-color: #884474;
       text-decoration: none;
+      text-align: center;
+      align-content: center;
     }
-  </style>
+</style>

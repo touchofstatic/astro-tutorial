@@ -1,24 +1,22 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "About me";
+const pageTitle = "About Me";
 
 const identity = {
   firstName: "KC",
   country: "Israel",
   occupation: "janitor",
-  hobbies: ["video game", "watching vtubers", "rock climbing"],
+  hobbies: ["watching vtubers", "video games", "reading"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript?", "Astro", "eat hot chip", "cry"];
+const skills = ["HTML", "CSS", "JavaScript?...", "Astro", "eat hot chip", "cry"];
 
 const happy = true;
 const finished = true;
-const goal = 10;
+const goal = 14;
 
-const skillColor = "navy";
+const skillColor = "#884474";
 const textCase = "uppercase";
 const fontWeight = "bold";
 ---
@@ -29,10 +27,6 @@ const fontWeight = "bold";
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
     <style define:vars={{ skillColor, fontWeight, textCase }}>
-      /* h1 {
-        color: purple;
-        font-size: 4rem;
-      } */
       .skill {
         color: var(--skillColor);
         font-weight: var(--fontWeight);
@@ -63,8 +57,7 @@ const fontWeight = "bold";
       {
         identity.hobbies.length >= 2 && (
           <li>
-            Two of my hobbies are: {identity.hobbies[0]} and{" "}
-            {identity.hobbies[1]}
+            One of my hobbies is: {identity.hobbies[0]} 
           </li>
         )
       }
@@ -78,8 +71,17 @@ const fontWeight = "bold";
 
     {finished && <p>I finished this tutorial!</p>}
 
-    <p style="color: white">You've got this, and you're here for a reason.</p>
-
+  <p class="surprise" >You can do this, and you're here for a reason.</p>
   </BaseLayout>
   </body>
 </html>
+
+<style>
+.surprise {
+  color:#fcfaeb
+}
+
+.dark .surprise {
+  color:#282a35
+}
+</style>
