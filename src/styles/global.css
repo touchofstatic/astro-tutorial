@@ -8,8 +8,12 @@ html.dark {
 }
 
 .dark .post-links a {
-  color:#fdb7f1;
+  color:#ffdef9;
   text-decoration: none;
+}
+
+.dark a {
+  color:#ffdef9;
 }
 
 html {
@@ -35,6 +39,11 @@ h1 {
   font-size: 2.5rem;
 }
 
+a {
+  color:#551a43;
+}
+
+
 /* nav styles */
 .hamburger {
   padding-right: 20px;
@@ -46,7 +55,7 @@ h1 {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #c133b3;
+  background-color: #b43ea8;
 }
 
 
