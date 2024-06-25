@@ -8,6 +8,9 @@ html.dark {
   color: #fff;
 }
 
+/* a {color:#FF0000;}
+a:visited {color:#00FF00;} */
+
 /* .dark .blogpost-links a {
   color:#ff2f03;
   text-decoration: none;
