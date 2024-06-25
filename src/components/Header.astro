@@ -6,10 +6,14 @@ import ThemeSwitch from './ThemeSwitch.astro';
 ---
 <header>
     <nav>
-        <Hamburger />
-        <!-- only the first one works?? -->
-        <ThemeSwitch />
-        <!-- <ThemeIcon /> -->
-        <Navigation />
+            <style>
+            nav {
+              display: flex;
+              gap: 1rem;
+            }
+            </style>
+            <Hamburger />
+            <Navigation />
+            <ThemeSwitch />
     </nav>
 </header>
