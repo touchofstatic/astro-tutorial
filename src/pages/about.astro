@@ -22,10 +22,13 @@ const fontWeight = "bold";
 ---
 
 <html lang="en">
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
+
+
     <style define:vars={{ skillColor, fontWeight, textCase }}>
       .skill {
         color: var(--skillColor);
@@ -34,9 +37,13 @@ const fontWeight = "bold";
       }
     </style>
   </head>
+
+
   <body>
     <BaseLayout pageTitle={pageTitle}>
     <h2>... and my new Astro site!</h2>
+    
+    <!-- <a href="https://htmlcolorcodes.com/">link color test</a> -->
 
     <p>
       I am working through Astro's introductory tutorial. This is the second
@@ -74,8 +81,10 @@ const fontWeight = "bold";
   <p class="surprise" >You can do this, and you're here for a reason.</p>
   </BaseLayout>
   </body>
+  
 </html>
 
+<!-- the element of surprise -->
 <style>
 .surprise {
   color:#fcfaeb

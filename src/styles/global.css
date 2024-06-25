@@ -1,26 +1,29 @@
+/* dark mode elements */
 html.dark {
   background-color: #282a35;
   color: #fff;
 }
 
-.dark .nav-links a {
+ .dark .nav-links a {
   color: #fff;
 }
 
-.dark .post-links a {
-  color:#ffdef9;
+/* .dark .blogpost-links a {
+  color:#ff2f03;
   text-decoration: none;
 }
 
-.dark a {
-  color:#ffdef9;
-}
+.blogpost-links a {
+  color:#ecff03;
+  text-decoration: none;
+} */
 
+/* light mode tutorial css */
+/* DON'T EDIT TOO MUCH IT'S FINE */
 html {
   background-color: #fcfaeb;
   font-family: Victor Mono;
 }
-
 
 body {
   margin: 0 auto;
@@ -39,10 +42,6 @@ h1 {
   font-size: 2.5rem;
 }
 
-a {
-  color:#551a43;
-}
-
 
 /* nav styles */
 .hamburger {
@@ -55,21 +54,22 @@ a {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #b43ea8;
+  background-color: #884474;
 }
 
-
-/* default state (hidden on mobile)?*/
+/* nav links placement and background that's hidden until interaction? */
 .nav-links {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #bd89d1;
+  /* background-color: #bd89d1; */
   display: none;
   margin: 0;
 }
 
+/* nav links TEXT? */
 .nav-links a {
+  color: #60274f;
   display: block;
   text-align: center;
   padding: 10px 0;
@@ -79,17 +79,17 @@ a {
   text-transform: uppercase;
 }
 
-/*responsive*/
+/*hover or focus response*/
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #bd89d1;
+  background-color: #bd89d176;
 }
 
-/*????*/
 .expanded {
   display: unset;
 }
 
+/* mobile nav behavior */
 @media screen and (min-width: 636px) {
   .nav-links {
     margin-left: 5em;
@@ -107,9 +107,4 @@ a {
   .hamburger {
     display: none;
   }
-}
-
-.post-links a {
-  color:#551a43;
-  text-decoration: none;
 }
