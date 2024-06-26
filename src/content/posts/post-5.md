@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: My Fifth Blog Post
 pubDate: 2024-06-25
 description: "I finished the Astro tutorial!"
