@@ -6,8 +6,8 @@ const { frontmatter } = Astro.props;
 <BaseLayout pageTitle={frontmatter.title}>
 <p><img src={frontmatter.image.url} width="200" alt={frontmatter.image.alt} /></p>
 <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
-<p transition:animate={fade({ duration: '0.5s' })}>{frontmatter.description}</p>
-<!-- <p>{frontmatter.description}</p> -->
+<!-- <p transition:animate={fade({ duration: '0.5s' })}>{frontmatter.description}</p> -->
+<p>{frontmatter.description}</p>
 <p>Written by <a href="/about/">{frontmatter.author}</a></p>
 <div class="tags">
     {frontmatter.tags.map((tag) => (
@@ -17,6 +17,7 @@ const { frontmatter } = Astro.props;
 <hr></hr>
 <slot />
 </BaseLayout>
+
 <style>
 
   .tags {
