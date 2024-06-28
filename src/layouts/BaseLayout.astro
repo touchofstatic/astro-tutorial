@@ -6,7 +6,6 @@ import "../styles/global.css";
 const { pageTitle } = Astro.props;
 
 import { ViewTransitions, slide } from "astro:transitions";
-import { fade } from 'astro:transitions';
 ---
 
 <html lang="en">
@@ -21,6 +20,7 @@ import { fade } from 'astro:transitions';
 
   <body>
     <Header />
+    <!-- <h1>{pageTitle}</h1> -->
     <h1 transition:animate="slide">{pageTitle}</h1>
     <slot />
     <Footer />
