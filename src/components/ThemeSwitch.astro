@@ -1,8 +1,9 @@
 ---
 ---
 <div class="theme-switch">
+
   <button id="themeToggle">BIG EXPLOSION</button>
-  <img class="test" src="https://i.gifer.com/2a9n.gif" />
+  <img class="test" id="explosionGif" src="explosion1d100.gif"/>
 
   <style>
     .theme-switch{
@@ -17,7 +18,7 @@
       z-index: 2;
       position:absolute;
       right:10px;
-      display:none;
+      display: none;
     }
   </style>
   
@@ -32,6 +33,7 @@
 
   
 <script is:inline>
+//  view transitions stuff
     // document.addEventListener('astro:page-load', () => {
     const theme = (() => {
       if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -57,8 +59,10 @@
       element.classList.toggle("dark");
   
       const isDark = element.classList.contains("dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-      
+      localStorage.setItem("theme", isDark ? "dark" : "light");      
+
+      document.getElementById("explosionGif").style.display = "inline-block";
+      setTimeout(function () {document.getElementById("explosionGif").style.display = "none"}, 1080);
     }
   
     document.getElementById("themeToggle").addEventListener("click", handleToggleClick);
@@ -66,6 +70,7 @@
   </script>
   </div>
 
+<!-- view transitions stuff -->
   <!-- <script>
     document.addEventListener('astro:after-swap', () => {
       localStorage.theme === 'dark'
