@@ -14,7 +14,7 @@ Because my dark theme toggle says "BIG EXPLOSION", I wanted there to be an explo
 
 2. It's much more difficult to make a gif disappear after it plays once in JS. 
 - I learned about very limited support for gif `<image>` in JS and tried to import gif libraries from github;
-- I learned about `setTimeout()`, used it to hide a gif after waiting for the duration of its length, and even got [these awesome sprites on Itch.io](https://ansimuz.itch.io/explosion-animations-pack) to create my own gif with precise length, but the timing was never right. I learned about `setTimeout()` and why its time controls are not reliable and don't work the way I thought they do;
+- I learned about `setTimeout()`, used it to hide a gif after waiting for the duration of its length, and even grabbed [these awesome sprites on Itch.io](https://ansimuz.itch.io/explosion-animations-pack) to create my own gif with precise duration, but the timing was never right. I learned about `setTimeout()` and why its time controls are not reliable and don't work the way I thought they do;
 - I confirmed my concern that to play a gif from 00:00 on each consecutive click you can only really delete and rebuild the element every time;
 - I read that some people strongly suggest using video over gifs in development and that some video formats can have transparency!
 - I learned about sprite animation using JS `Canvas API`, did a [fun tutorial about it on Dev.to](https://dev.to/martyhimmel/animating-sprite-sheets-with-javascript-ag3), and successfully created my `<canvas>` animation. This is my first time animating with sprite sheets! Because I can design visual elements myself, I'm excited to use what I've learned about displaying different types of visuals in the future.
