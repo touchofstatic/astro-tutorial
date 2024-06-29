@@ -1,5 +1,5 @@
 ---
-title: My Fifth Blog Post
+title: Blog Post 5
 pubDate: 2024-06-25
 description: "I finished the Astro tutorial!"
 author: KC

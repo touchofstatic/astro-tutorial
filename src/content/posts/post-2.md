@@ -1,5 +1,5 @@
 ---
-title: My Second Blog Post
+title: Blog Post 2
 pubDate: 2024-06-14
 description: "After learning some Astro, I couldn't stop!"
 author: KC

@@ -1,5 +1,5 @@
 ---
-title: My Sixth Blog Post
+title: Blog Post 6
 pubDate: 2024-06-28
 description: "I added content collections to my blog using [...slug].astro!"
 author: KC

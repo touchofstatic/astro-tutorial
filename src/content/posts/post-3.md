@@ -1,5 +1,5 @@
 ---
-title: My Third Blog Post
+title: Blog Post 3
 pubDate: 2024-06-14
 description: "I had some challenges, but asking in the community really helped!"
 author: KC

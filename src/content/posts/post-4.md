@@ -1,5 +1,5 @@
 ---
-title: My Fourth Blog Post
+title: Blog Post 4
 pubDate: 2024-06-19
 description: "This post will show up on its own!"
 author: KC

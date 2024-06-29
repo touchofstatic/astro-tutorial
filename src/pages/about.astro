@@ -6,7 +6,7 @@ const pageTitle = "About Me";
 const identity = {
   firstName: "KC",
   country: "Israel",
-  occupation: "janitor",
+  occupation: "uneployed",
   hobbies: ["watching vtubers", "video games", "reading"],
 };
 
@@ -60,7 +60,7 @@ const fontWeight = "bold";
     <ul>
       <li>My name is {identity.firstName}.</li>
       <li>
-        I live in {identity.country} and I work as a {identity.occupation}.
+        I live in {identity.country} and I'm{identity.occupation}.
       </li>
       {
         identity.hobbies.length >= 2 && (
