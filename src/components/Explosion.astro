@@ -1,0 +1,54 @@
+---
+---
+<div class="explosion">
+    <canvas width="130" height="80"></canvas>
+
+
+<script>
+    let image = new Image();
+    image.src = "explosion-3.png";
+    image.onload = function() {
+        init();
+    };
+    
+    let canvas = document.querySelector("canvas");
+    //getContext describes what type of content the canvas has
+    let context = canvas.getContext("2d");
+    
+    const width = 128;
+    const height = 80
+    function drawFrame(frameX, frameY, canvasX, canvasY) {
+        context.drawImage(image,
+                    frameX * width, frameY * height, width, height,
+                    canvasX, canvasY, width, height);
+    }
+    
+    const cycleLoop = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let currentLoopIndex = 0;
+    let frameCount = 0;
+    
+    function step() {
+        frameCount++;
+        if (frameCount < 3) {
+            window.requestAnimationFrame(step);
+            return;
+        }
+        frameCount = 0;
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        drawFrame(cycleLoop[currentLoopIndex], 0, 0, 0);
+        currentLoopIndex++;
+        if (currentLoopIndex >= cycleLoop.length) {
+            currentLoopIndex = 0;
+        }
+        window.requestAnimationFrame(step);
+    }
+    
+    function init() {
+        window.requestAnimationFrame(step);
+    }
+    </script>
+
+</div>
+
+    
+    
