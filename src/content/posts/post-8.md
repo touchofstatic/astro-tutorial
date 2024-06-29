@@ -28,9 +28,9 @@ Because my dark theme toggle says "BIG EXPLOSION", I wanted there to be an explo
 Basically, I spent three days to make a simple joke animation play on my first website and it was extremely fun!
 
 <p display="inline-block">
-<image src="../../src/images/ezgif-5-d2cafdb86f.gif" height="100"></image>
-<image src="../../src/images/ezgif-5-d2cafdb86f.gif" height="100"></image>
-<image src="../../src/images/ezgif-5-d2cafdb86f.gif" height="100"></image>
+<image src="../../images/ezgif-5-d2cafdb86f.gif" height="100"></image>
+<image src="../../images/ezgif-5-d2cafdb86f.gif" height="100"></image>
+<image src="../../images/ezgif-5-d2cafdb86f.gif" height="100"></image>
 </p>
 
 # ALWAYS COMMIT TO THE BIT!
