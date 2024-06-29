@@ -1,9 +1,18 @@
 ---
 ---
+<!-- 
+explosion-1 a 32x32 8
+explosion-2 b 64x64 8
+explosion-3 c 128x80 10
+explosion-4 d 128x128 12
+explosion-5 e 192x192 22
+explosion-6 f 48x48 8
+-->
+
 <div class="theme-switch">
 
   <button id="themeSwitchButton">BIG EXPLOSION</button>
-  <p class="test"><canvas id="explosion" width="128" height="80"></canvas></p>
+  <p class="test"><canvas id="explosion" width="128" height="128"></canvas></p>
 
 
   <style>
@@ -35,24 +44,29 @@
 <script is:inline>
   // ANIMATION
           let image = new Image();
-          image.src = "explosion-3.png";
+          image.src = "explosion-1.png";
           
           //getContext describes what type of content the canvas has
           let canvas = document.querySelector("canvas");
-          let context = canvas.getContext("2d");
-          const width = 128;
-          const height = 80;
+          let ctx = canvas.getContext("2d");
+          ctx.imageSmoothingEnabled = false;
+          const width = 32;
+          const height = 32;
+
+          const scale = 4;
+          const scaledWidth = scale * width;
+          const scaledHeight = scale * height;
           
 
           // draw a frame internal func
           function drawFrame(frameX, frameY, canvasX, canvasY) {
-              context.drawImage(image,
-                      frameX * width, frameY * height, width, height,
-                      canvasX, canvasY, width, height);
-          }
+            ctx.drawImage(image,
+                frameX * width, frameY * height, width, height,
+                canvasX, canvasY, scaledWidth, scaledHeight);
+}
 
           let currentFrame = 0;
-          const finalFrame = 10;
+          const finalFrame = 8;
           let fpsCount = 0;
                   
           
@@ -66,7 +80,7 @@
               fpsCount = 0;
               
               // clear canvas
-              context.clearRect(0, 0, canvas.width, canvas.height);
+              ctx.clearRect(0, 0, canvas.width, canvas.height);
 
               // draw next frame
               drawFrame(currentFrame, 0, 0, 0);
