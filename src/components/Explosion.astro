@@ -1,54 +1,76 @@
 ---
 ---
+<div>
+<button id="draw">draw</button>
+
 <div class="explosion">
-    <canvas width="130" height="80"></canvas>
+    <canvas width="128" height="80"></canvas>
+</div> 
+<!-- <canvas id="explosion" width="128" height="80"></canvas> -->
+
+<script is:inline>
+        let image = new Image();
+        image.src = "explosion-3.png";
+        // runs the function after page load, in the example
+        // image.onload = function() {
+        //      init();
+        //  };
+
+        // STRUGGLE ZONE
+        document.getElementById("draw").addEventListener("click", init);
 
 
-<script>
-    let image = new Image();
-    image.src = "explosion-3.png";
-    image.onload = function() {
-        init();
-    };
-    
-    let canvas = document.querySelector("canvas");
-    //getContext describes what type of content the canvas has
-    let context = canvas.getContext("2d");
-    
-    const width = 128;
-    const height = 80
-    function drawFrame(frameX, frameY, canvasX, canvasY) {
-        context.drawImage(image,
+        //getContext describes what type of content the canvas has
+        let canvas = document.querySelector("canvas");
+        let context = canvas.getContext("2d");
+        const width = 128;
+        const height = 80
+
+        // draw a frame internal func
+        function drawFrame(frameX, frameY, canvasX, canvasY) {
+            context.drawImage(image,
                     frameX * width, frameY * height, width, height,
                     canvasX, canvasY, width, height);
-    }
-    
-    const cycleLoop = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    let currentLoopIndex = 0;
-    let frameCount = 0;
-    
-    function step() {
-        frameCount++;
-        if (frameCount < 3) {
+        }
+
+
+        let currentFrame = 0;
+        const finalFrame = 10;
+        let fpsCount = 0;
+                
+        function step() {
+            //slow down
+            fpsCount++;
+            if (fpsCount < 3) {
+                 window.requestAnimationFrame(step);
+                 return;
+             }
+             fpsCount = 0;
+            
+            // clear canvas
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            // draw next frame
+            drawFrame(currentFrame, 0, 0, 0);
+            currentFrame++;
+
+            //loop
+            // if (currentFrame >= finalFrame) {
+            //     currentFrame = 0;
+            // }
+            // END RECURSION!!!!!!!
+            if (currentFrame > finalFrame){
+                return;
+            }
+
             window.requestAnimationFrame(step);
-            return;
         }
-        frameCount = 0;
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        drawFrame(cycleLoop[currentLoopIndex], 0, 0, 0);
-        currentLoopIndex++;
-        if (currentLoopIndex >= cycleLoop.length) {
-            currentLoopIndex = 0;
+        
+        // start
+        function init() {
+            window.requestAnimationFrame(step);
+            currentFrame = 0;
         }
-        window.requestAnimationFrame(step);
-    }
-    
-    function init() {
-        window.requestAnimationFrame(step);
-    }
-    </script>
 
+</script>
 </div>
-
-    
-    

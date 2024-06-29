@@ -1,4 +1,4 @@
-<!-- TO BE DELETED -->
+<!-- TO BE DELETED
 <canvas width="300" height="200"></canvas>
 
 <style>
@@ -40,12 +40,16 @@ function step() {
     return;
   }
   frameCount = 0;
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+
   drawFrame(cycleLoop[currentLoopIndex], 0, 0, 0);
   currentLoopIndex++;
+  
   if (currentLoopIndex >= cycleLoop.length) {
     currentLoopIndex = 0;
   }
+
   window.requestAnimationFrame(step);
 }
 
@@ -53,4 +57,4 @@ function init() {
   window.requestAnimationFrame(step);
 }
 
-</script>
+</script> -->
