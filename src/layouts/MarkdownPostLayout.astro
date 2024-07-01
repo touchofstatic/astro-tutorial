@@ -7,12 +7,22 @@ import { getCollection } from "astro:content";
 const allPosts = await getCollection("posts");
 const prevPost = allPosts[frontmatter.index - 1];
 const nextPost = allPosts[frontmatter.index + 1];
+
 ---
 <BaseLayout pageTitle={frontmatter.title}>
   
   <!-- STRUGGLE ZONE -->
-  <button class="pagination" id="prev"><a href={`/posts/${prevPost.slug}/`}>Previous</a></button>
-  <button class="pagination" id="next"><a href={`/posts/${nextPost.slug}/`}>Next</a></button>
+    <aside class="pagination">
+      { 
+      (typeof prevPost !== "undefined") && (
+      <button id="prev"><a href={`/posts/${prevPost.slug}/`}>Previous</a></button>)
+      }
+      
+      { 
+      (typeof nextPost !== "undefined") && (
+            <button id="next"><a href={`/posts/${nextPost.slug}/`}>Next</a></button>)
+      }
+  </aside>
 
   <p><img src={frontmatter.image.url} width="200" alt={frontmatter.image.alt} /></p>
   <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
