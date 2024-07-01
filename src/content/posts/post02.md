@@ -1,6 +1,7 @@
 ---
 title: Blog Post 2
 pubDate: 2024-06-14
+index: 1
 description: "After learning some Astro, I couldn't stop!"
 author: KC
 image:

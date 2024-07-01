@@ -1,6 +1,7 @@
 ---
 title: Blog Post 7
 pubDate: 2024-06-28
+index: 6
 description: "I added client-side routing to my project!"
 author: KC
 image:

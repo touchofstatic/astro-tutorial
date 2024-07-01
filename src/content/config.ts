@@ -2,10 +2,11 @@
 import { z, defineCollection } from "astro:content";
 // Define a `type` and `schema` for each collection
 const postsCollection = defineCollection({
-    // type: 'content',
+    type: 'content',
     schema: z.object({
       title: z.string(),
       pubDate: z.date(),
+      index: z.number(),
       description: z.string(),
       author: z.string(),
       image: z.object({

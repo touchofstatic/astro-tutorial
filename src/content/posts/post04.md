@@ -1,6 +1,7 @@
 ---
 title: Blog Post 4
 pubDate: 2024-06-19
+index: 3
 description: "This post will show up on its own!"
 author: KC
 image:

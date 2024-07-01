@@ -1,6 +1,7 @@
 ---
 title: Blog Post 8
 pubDate: 2024-06-29
+index: 7
 description: "I made a button click play an animation!"
 author: KC
 image:

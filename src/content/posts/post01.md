@@ -1,6 +1,7 @@
 ---
 title: 'My First Blog Post'
 pubDate: 2024-06-14
+index: 0
 description: 'This is the first post of my new Astro blog.'
 author: 'KC'
 image:

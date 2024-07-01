@@ -1,6 +1,7 @@
 ---
 title: Blog Post 5
 pubDate: 2024-06-25
+index: 4
 description: "I finished the Astro tutorial!"
 author: KC
 image:
