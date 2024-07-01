@@ -26,7 +26,7 @@ Because my dark theme toggle says "BIG EXPLOSION", I wanted there to be an explo
 
 4. **What's next:** I'd like to separate theme toggle and explosion animation features in `ThemeSwitch.astro` into components if possible, but I'm not sure what would that look like.
 
-Basically, I spent three days to make a simple joke animation play on my first website and it was extremely fun!
+Basically, I spent three days to make a simple joke animation play on my first website and it was really fun!
 
 <p display="inline-block">
 <image src="../../images/ezgif-5-d2cafdb86f.gif" height="100"></image>

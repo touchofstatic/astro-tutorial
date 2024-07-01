@@ -10,19 +10,6 @@ const nextPost = allPosts[frontmatter.index + 1];
 
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-  
-  <!-- STRUGGLE ZONE -->
-    <aside class="pagination">
-      { 
-      (typeof prevPost !== "undefined") && (
-      <button id="prev"><a href={`/posts/${prevPost.slug}/`}>Previous</a></button>)
-      }
-      
-      { 
-      (typeof nextPost !== "undefined") && (
-            <button id="next"><a href={`/posts/${nextPost.slug}/`}>Next</a></button>)
-      }
-  </aside>
 
   <p><img src={frontmatter.image.url} width="200" alt={frontmatter.image.alt} /></p>
   <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
@@ -36,6 +23,20 @@ const nextPost = allPosts[frontmatter.index + 1];
   <hr></hr>
   <slot />
 
+   <!-- STRUGGLE ZONE -->
+   <div class="pagination">
+    { 
+    (typeof prevPost !== "undefined") && (
+    // <button id="prev"><a href={`/posts/${prevPost.slug}/`}>Previous</a></button>)
+    <a href={`/posts/${prevPost.slug}/`}>Previous</a>)
+    }
+    
+    { 
+    (typeof nextPost !== "undefined") && (
+          // <button id="next"><a href={`/posts/${nextPost.slug}/`}>Next</a></button>)
+          <a href={`/posts/${nextPost.slug}/`}>Next</a>)
+    }
+</div>
 </BaseLayout>
 
 
@@ -53,4 +54,13 @@ const nextPost = allPosts[frontmatter.index + 1];
     /* font-size: 1.15em; */
     background-color: #F8FCFD;
   }
+
+  .pagination a {
+      padding: 0.5rem 1rem;
+      color: white;
+      background-color: #993366;
+      text-decoration: none;
+      text-align: center;
+      align-content: center;
+    }
 </style>
