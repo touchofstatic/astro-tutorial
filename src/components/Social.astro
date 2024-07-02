@@ -1,10 +1,10 @@
 ---
 const { linktext, platform, username } = Astro.props;
 ---
-<a href={`https://www.${platform}.com/${username}`}>{linktext}</a>
+<a id="socialButton" href={`https://www.${platform}.com/${username}`}>{linktext}</a>
 
 <style>
-    a {
+    #socialButton {
       padding: 0.5rem 1rem;
       color: white;
       background-color: #854775;
