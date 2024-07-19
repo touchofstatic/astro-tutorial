@@ -13,7 +13,9 @@
     "@astrojs/preact": "^3.5.0",
     "@astrojs/rss": "^4.0.6",
     "astro": "^4.11.3",
+    "mdast-util-to-string": "^4.0.0",
     "preact": "^10.22.0",
+    "reading-time": "^1.5.0",
     "victormono": "^1.5.6"
   }
 }
